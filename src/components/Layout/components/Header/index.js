@@ -13,7 +13,6 @@ import {
     faCircleXmark,
     faSpinner,
     faMagnifyingGlass,
-    faSignIn,
     faEllipsisVertical,
     faEarthAsia,
     faCircleQuestion,
@@ -27,6 +26,7 @@ import {
 import images from '~/assets/images';
 import { Wrapper as PropperWrapper } from '~/components/Popper';
 import Menu from '~/components/Popper/Menu';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -168,10 +168,11 @@ function Header() {
                         onChange={handleChangeMenu}
                     >
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
-                                src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/80c1730714a5028a906f4a2f5c42a2a3~c5_100x100.jpeg?x-expires=1688205600&x-signature=IPxDQ3zrb4ESrq5fmjD3EiH%2BUuU%3D"
+                                src="https://pe16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/80c1730714a5028a906f4a2f5c42a2a3~c5_100x100.jpeg?x-expires=1688205600&x-signature=IPxDQ3zrb4ESrq5fmjD3EiH%2BUuU%3D"
                                 alt="Nguyen Van A"
+                                fallback="https://fullstack.edu.vn/static/media/f8-icon.18cd71cfcfa33566a22b.png"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
