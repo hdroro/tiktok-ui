@@ -20,6 +20,8 @@
         background-color: transparent;
         height: 100%;
         caret-color: var(--primary);
+        font-family: DisplayFontRegular;
+        font-weight: 100;
     }
 
     input:not(:placeholder-shown) ~ .search-btn {
