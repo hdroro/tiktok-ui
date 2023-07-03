@@ -22,6 +22,7 @@ function App() {
                                 path={route.path}
                                 element={
                                     <Layout>
+                                        {console.log(route.path)}
                                         <Page />
                                     </Layout>
                                 }
