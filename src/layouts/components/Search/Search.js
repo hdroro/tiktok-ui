@@ -18,9 +18,9 @@ function Search() {
     const [searchResult, setSearchResult] = useState([]);
     const [loading, setLoading] = useState(false);
 
-    const [showResult, setShowResult] = useState(true);
+    const [showResult, setShowResult] = useState(false);
 
-    const debounce = useDebounce(searchValue, 500);
+    const debouncedValue = useDebounce(searchValue, 500);
 
     const handleHideResult = () => {
         setShowResult(false);
@@ -42,21 +42,21 @@ function Search() {
     const inputRef = useRef();
 
     useEffect(() => {
-        if (!debounce.trim()) {
+        if (!debouncedValue.trim()) {
             setSearchResult([]);
             return;
         }
 
         const fetchApi = async () => {
             setLoading(true);
-            const result = await searchServices.search(debounce);
+            const result = await searchServices.search(debouncedValue);
             setSearchResult(result);
 
             setLoading(false);
         };
 
         fetchApi();
-    }, [debounce]);
+    }, [debouncedValue]);
 
     return (
         <div>
@@ -68,7 +68,7 @@ function Search() {
                     <div className={cx('search-result')} tabIndex="-1" {...attrs}>
                         <PropperWrapper>
                             <h4 className={cx('search-title')}>Accounts</h4>
-
+                            {/* CAN CHINH O DAY (CO SD USEMEMO()) */}
                             {searchResult.map((result) => (
                                 <AccountItem key={result.id} data={result} />
                             ))}
