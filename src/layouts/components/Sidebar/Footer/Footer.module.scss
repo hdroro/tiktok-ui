@@ -1,0 +1,25 @@
+.wrapper {
+    padding-top: 20px;
+    border-top: 1px solid #e3e3e4;
+    padding-left: 8px;
+}
+
+.group {
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.group-item {
+    color: rgba(22, 24, 35, 0.5);
+    margin-right: 5px;
+    font-size: 1.2rem;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.copy-right {
+    color: rgba(22, 24, 35, 0.5);
+    font-size: 1.2rem;
+}

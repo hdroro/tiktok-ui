@@ -6,15 +6,16 @@ import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 import { Wrapper as PropperWrapper } from '~/components/Popper';
 import AccountPreview from './AccountPreview/AccountPreview';
+import PropTypes from 'prop-types';
 
 const cx = classNames.bind(styles);
 
-function AccountItem() {
+function AccountItem({ data, isSuggested }) {
     const renderPreview = (props) => {
         return (
             <div tabIndex="-1" {...props}>
                 <PropperWrapper>
-                    <AccountPreview />
+                    {isSuggested && <AccountPreview data={data} isSuggested={isSuggested} />}
                 </PropperWrapper>
             </div>
         );
@@ -29,22 +30,25 @@ function AccountItem() {
                 render={renderPreview}
             >
                 <div className={cx('account-item')}>
-                    <img
-                        className={cx('avatar')}
-                        src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/d1b57489fe0fbc9f69743de695e4f89c~c5_100x100.jpeg?x-expires=1688947200&x-signature=hWpRWbrWYruZQ9rsSTxVpRynHJk%3D"
-                        alt=""
-                    />
+                    <img className={cx('avatar')} src={data.avatar} alt={data.nickname} />
                     <div className={cx('item-info')}>
                         <p className={cx('nickname')}>
-                            <strong>hongdiem</strong>
-                            <FontAwesomeIcon className={cx('icon-check')} icon={faCheckCircle} />
+                            <strong>{data.nickname}</strong>
+                            {data.tick && (
+                                <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />
+                            )}
                         </p>
-                        <p className={cx('name')}>Hồng Diễm</p>
+                        <p className={cx('name')}>{data.full_name}</p>
                     </div>
                 </div>
             </Tippy>
         </div>
     );
 }
+
+AccountItem.propTypes = {
+    data: PropTypes.object,
+    isSuggested: PropTypes.bool,
+};
 
 export default AccountItem;

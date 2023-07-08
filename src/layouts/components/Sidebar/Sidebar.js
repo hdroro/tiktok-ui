@@ -11,9 +11,14 @@ import {
     UserGroupIcon,
 } from '~/components/Icons';
 import SuggestedAccounts from '~/components/SuggestedAccounts';
+import Button from '~/components/Button/Button';
+import Footer from './Footer/Footer';
+
 const cx = classNames.bind(styles);
 
 function Sidebar() {
+    const currentUser = true;
+
     return (
         <aside className={cx('wrapper')}>
             <Menu>
@@ -36,8 +41,20 @@ function Sidebar() {
                     activeIcon={<LiveActiveIcon />}
                 />
             </Menu>
-            <SuggestedAccounts label="Suggested Accounts" />
-            {/* <SuggestedAccounts label="Following Accounts" /> */}
+            {currentUser ? (
+                <SuggestedAccounts label="Suggested Accounts" isSuggested />
+            ) : (
+                <div className={cx('subscribe-wrapper')}>
+                    <p className={cx('subscribe')}>
+                        Log in to follow creators, like videos, and view comments.
+                    </p>
+                    <Button outline large>
+                        Login
+                    </Button>
+                </div>
+            )}
+            {currentUser && <SuggestedAccounts label="Following Accounts" />}
+            <Footer />
         </aside>
     );
 }
