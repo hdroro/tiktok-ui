@@ -1,0 +1,72 @@
+.wrapper {
+    --size: 1.5rem;
+    --line-height: 1.5;
+
+    padding: 16px 0 48px 0;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.container {
+    padding: 64px 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
+}
+
+.border {
+    width: 100%;
+    border: 2px dashed rgba(22, 24, 35, 0.2);
+    border-radius: 10px;
+}
+
+.input-btn {
+    display: none;
+}
+.content {
+    padding: 60px 35px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+
+    &:hover {
+        background: rgba(22, 24, 35, 0.03);
+    }
+}
+
+.select-video {
+    margin-top: 24px;
+}
+.another-guide {
+    font-family: 'DisplayFontRegular';
+    font-size: var(--size);
+    line-height: var(--line-height);
+    color: rgba(22, 24, 35, 0.75);
+}
+.text-sub {
+    font-family: 'DisplayFontRegular';
+    margin-top: 4px;
+    margin-bottom: 24px;
+    font-size: var(--size);
+    line-height: var(--line-height);
+    color: rgba(22, 24, 35, 0.75);
+}
+
+.text-video-info {
+    font-family: 'DisplayFontRegular';
+    text-align: center;
+    font-size: var(--size);
+    line-height: 2;
+    color: rgb(115, 116, 123);
+}
+
+.btn-select {
+    margin-top: 35px;
+    height: 35px;
+    width: 400px;
+    border-radius: 0;
+}

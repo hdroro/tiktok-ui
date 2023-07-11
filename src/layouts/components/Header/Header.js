@@ -101,7 +101,9 @@ function Header() {
                         <>
                             <Tippy delay={(0, 50)} content="Upload video" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <UploadIcon />
+                                    <a href="/upload" className={cx('upload')}>
+                                        <UploadIcon />
+                                    </a>
                                 </button>
                             </Tippy>
 

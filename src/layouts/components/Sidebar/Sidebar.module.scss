@@ -1,7 +1,19 @@
 .wrapper {
+    position: fixed;
     width: 356px;
     padding: 20px 0px 26px 8px;
     margin-left: -18px;
+    height: 90vh; /* Adjust the height as needed */
+    overflow-y: hidden;
+
+    &:hover {
+        overflow-y: scroll;
+    }
+}
+
+.wrapper::-webkit-scrollbar {
+    width: 0.6rem; /* Adjust the width as needed */
+    color: rgba(22, 24, 35, 0.06);
 }
 
 .subscribe-wrapper {
