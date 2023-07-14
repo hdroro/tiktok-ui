@@ -7,6 +7,7 @@ import Tippy from '@tippyjs/react/headless';
 import { Wrapper as PropperWrapper } from '~/components/Popper';
 import AccountPreview from './AccountPreview/AccountPreview';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -29,7 +30,7 @@ function AccountItem({ data, isSuggested }) {
                 placement="bottom"
                 render={renderPreview}
             >
-                <div className={cx('account-item')}>
+                <Link to={`/@${data.nickname}`} className={cx('account-item')}>
                     <img className={cx('avatar')} src={data.avatar} alt={data.nickname} />
                     <div className={cx('item-info')}>
                         <p className={cx('nickname')}>
@@ -40,7 +41,7 @@ function AccountItem({ data, isSuggested }) {
                         </p>
                         <p className={cx('name')}>{data.full_name}</p>
                     </div>
-                </div>
+                </Link>
             </Tippy>
         </div>
     );

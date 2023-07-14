@@ -1,0 +1,111 @@
+.wrapper {
+    padding: 32px 24px 32px;
+    display: flex;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.avatar {
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+}
+
+.container-info {
+    display: flex;
+    flex: 1;
+    cursor: pointer;
+}
+
+.info-detail {
+    margin-left: 20px;
+}
+
+.nickname {
+    font-size: 3.2rem;
+}
+
+.check {
+    font-size: 2rem;
+    color: #20d5ec;
+}
+
+.name {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+}
+
+.follow-btn {
+    width: 200px;
+}
+
+.unfollow-btn {
+    display: flex;
+}
+
+.message {
+    width: 156px;
+    margin-right: 8px;
+}
+
+.unfollow-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
+.count-info {
+    display: flex;
+    margin-top: 16px;
+}
+
+.followers,
+.likes {
+    margin-left: 20px;
+}
+.user-bio {
+    font-size: 1.6rem;
+    text-align: left;
+    line-height: 2.1;
+    font-family: FontRegular;
+    font-weight: 100;
+}
+
+.count-title {
+    color: rgba(22, 24, 35, 0.75);
+    font-family: FontRegular;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.03px;
+    display: inline-block;
+}
+
+.actions {
+    padding-left: 20%;
+}
+
+.share-btn {
+    background-color: transparent;
+    cursor: pointer;
+}
+.actions-btn {
+    background-color: transparent;
+    padding-left: 10px;
+    cursor: pointer;
+}
