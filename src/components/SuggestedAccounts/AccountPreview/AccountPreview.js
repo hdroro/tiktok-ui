@@ -4,18 +4,29 @@ import Button from '~/components/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
 const cx = classNames.bind(styles);
 
 function AccountPreview({ data }) {
+    const [btnState, setBtnState] = useState(false);
+    const handleClick = () => {
+        setBtnState(!btnState);
+    };
     return (
         <div className={cx('wrapper')}>
             <div className={cx('header')}>
                 <img className={cx('avatar')} src={data.avatar} alt={data.nickname} />
-                <div>
-                    <Button primary className={cx('follow-btn')}>
-                        Follow
-                    </Button>
+                <div onClick={handleClick}>
+                    {btnState ? (
+                        <Button outline className={cx('follow-btn')}>
+                            Unfollow
+                        </Button>
+                    ) : (
+                        <Button primary className={cx('follow-btn')}>
+                            Follow
+                        </Button>
+                    )}
                 </div>
             </div>
             <div className={cx('body')}>

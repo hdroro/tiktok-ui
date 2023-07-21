@@ -109,7 +109,9 @@ function Header() {
 
                             <Tippy delay={[0, 50]} content="Messages" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <MessageIcon />
+                                    <a href="/messages">
+                                        <MessageIcon />
+                                    </a>
                                 </button>
                             </Tippy>
                             <Tippy delay={[0, 50]} content="Inbox" placement="bottom">

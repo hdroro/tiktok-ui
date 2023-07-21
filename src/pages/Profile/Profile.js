@@ -151,7 +151,7 @@ function Profile() {
                                 <span className={cx('count-title')}> Likes</span>
                             </div>
                         </h3>
-                        <h2 className={cx('user-bio')}>{account[0].bio || 'No bio yet.'}</h2>
+                        <h2 className={cx('user-bio')}> {account[0].bio || 'No bio yet.'} </h2>
                     </div>
                 )}
 

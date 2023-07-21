@@ -122,7 +122,7 @@
     display: flex;
 }
 
-.menu-interaction::after {
+.wrapper-interaction::after {
     position: absolute;
     content: '';
     width: 100%;
@@ -183,7 +183,6 @@
     margin-top: 4px;
     color: rgb(22, 24, 35);
     transition: color 250ms ease 0s;
-    cursor: pointer;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -194,4 +193,5 @@
     width: 220px;
     height: 275px;
     border-radius: 5px;
+    cursor: pointer;
 }
