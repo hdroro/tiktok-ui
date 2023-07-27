@@ -33,6 +33,8 @@
 
 .messenges {
     width: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
     height: 60px;
     padding: 0px 16px 0px 24px;
     display: flex;
@@ -42,6 +44,10 @@
 .messenges-title {
     font-size: 2.4rem;
     font-family: FontBold;
+}
+
+.messenges-setting {
+    cursor: pointer;
 }
 
 .users {
@@ -54,6 +60,48 @@
     color: #161823;
 }
 
+.message-another {
+    position: relative;
+    padding: 0px 24px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    &:hover {
+        background: rgba(22, 24, 35, 0.03);
+        cursor: pointer;
+    }
+
+    &:hover .more-icon {
+        display: block;
+    }
+}
+
+.avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+}
+.info-user {
+    padding-left: 12px;
+}
+
+.curTime {
+    padding-top: 4px;
+    font-size: 14px;
+    font-family: DisplayFontRegular;
+    color: rgba(22, 24, 35, 0.6);
+}
+
+.more-icon {
+    position: absolute;
+    display: none;
+    width: 24px;
+    height: 24px;
+    top: 24px;
+    color: rgb(22, 24, 35);
+    right: 16px;
+}
+
 .messenger-content {
     display: flex;
     flex-direction: column;
@@ -63,4 +111,72 @@
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
     border-radius: 8px;
     margin-left: 16px;
+}
+
+.chat-header {
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 80px;
+    padding: 16px 0px 16px 16px;
+    border-bottom: 0.5px solid rgba(22, 24, 35, 0.12);
+    box-shadow: unset;
+}
+
+.header-content {
+    display: flex;
+    cursor: pointer;
+}
+
+.avatar-header {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+}
+
+.fullname-header {
+    font-size: 1.8rem;
+}
+
+.nickname-header {
+    font-size: 1.6rem;
+    font-family: DisplayFontRegular;
+}
+
+.chat-main {
+    display: flex;
+    flex-direction: column-reverse;
+    flex: 1 1 0%;
+    overflow-y: auto;
+    width: 100%;
+    padding: 24px 0px 16px;
+}
+
+.chat-send-bottom {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    padding: 13px 16px;
+    border-top: 0.5px solid rgba(22, 24, 35, 0.12);
+}
+
+.message-input-area {
+    background-color: rgba(22, 24, 35, 0.06);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 16px;
+    border-radius: 15px;
+}
+
+.input-message {
+    width: 100%;
+    background-color: rgba(22, 24, 35, 0);
+    padding-right: 10px;
+}
+
+.emoji-icon {
+    font-size: 2.6rem;
+    cursor: pointer;
 }

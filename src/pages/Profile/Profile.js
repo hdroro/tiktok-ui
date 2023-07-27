@@ -21,7 +21,6 @@ import {
     UnlockIcon,
 } from '~/components/Icons';
 import Tippy from '@tippyjs/react';
-import { Wrapper as PropperWrapper } from '~/components/Popper';
 import Menu from '~/components/Popper/Menu/Menu';
 
 const cx = classNames.bind(styles);
@@ -185,7 +184,7 @@ function Profile() {
                 <div className={cx('video')}>
                     <img
                         className={cx('video-show')}
-                        src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/42435dbb7bca7c6599a7a3b127d2112d~c5_100x100.jpeg?x-expires=1689955200&x-signature=JuuCRHQvC8mPqxcrP0EeW9esFrc%3D"
+                        src="https://files.fullstack.edu.vn/f8-tiktok/users/4904/63e351c39f2af.jpg"
                         alt=""
                     />
                     <span className={cx('video-title')}>
@@ -195,7 +194,7 @@ function Profile() {
                 <div className={cx('video')}>
                     <img
                         className={cx('video-show')}
-                        src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/42435dbb7bca7c6599a7a3b127d2112d~c5_100x100.jpeg?x-expires=1689955200&x-signature=JuuCRHQvC8mPqxcrP0EeW9esFrc%3D"
+                        src="https://files.fullstack.edu.vn/f8-tiktok/users/4904/63e351c39f2af.jpg"
                         alt=""
                     />
                     <span className={cx('video-title')}>
@@ -205,7 +204,7 @@ function Profile() {
                 <div className={cx('video')}>
                     <img
                         className={cx('video-show')}
-                        src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/42435dbb7bca7c6599a7a3b127d2112d~c5_100x100.jpeg?x-expires=1689955200&x-signature=JuuCRHQvC8mPqxcrP0EeW9esFrc%3D"
+                        src="https://files.fullstack.edu.vn/f8-tiktok/users/4904/63e351c39f2af.jpg"
                         alt=""
                     />
                     <span className={cx('video-title')}>
@@ -215,7 +214,7 @@ function Profile() {
                 <div className={cx('video')}>
                     <img
                         className={cx('video-show')}
-                        src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/42435dbb7bca7c6599a7a3b127d2112d~c5_100x100.jpeg?x-expires=1689955200&x-signature=JuuCRHQvC8mPqxcrP0EeW9esFrc%3D"
+                        src="https://files.fullstack.edu.vn/f8-tiktok/users/4904/63e351c39f2af.jpg"
                         alt=""
                     />
                     <span className={cx('video-title')}>

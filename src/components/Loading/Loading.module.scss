@@ -1,0 +1,24 @@
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Đảm bảo component "Loading" sẽ chiếm toàn bộ chiều cao của màn hình */
+}
+
+.loading-spinner {
+    color: var(--primary);
+    font-size: 4rem;
+}
+
+.icon-spin {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

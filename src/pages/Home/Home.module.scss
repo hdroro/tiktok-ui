@@ -1,4 +1,5 @@
 .new-content {
+    position: relative;
     padding: 20px 0px;
     display: flex;
     cursor: pointer;
@@ -9,6 +10,10 @@
     height: 56px;
     border-radius: 100%;
     margin: 0 10px;
+}
+
+.user-content {
+    margin-right: 114px;
 }
 
 .name-content {
@@ -40,9 +45,9 @@
 }
 
 .btn-follow {
-    position: relative;
-    left: 200px;
-    height: 22px;
+    position: absolute;
+    right: 0;
+    height: 28px;
 }
 
 .title-news {
@@ -54,8 +59,61 @@
     text-decoration: underline;
 }
 
-.video {
-    display: block;
-    width: 100%;
+.video-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-top: 10px;
+}
+
+.video-music {
+    flex-basis: 50%;
+    margin-right: 15px;
+}
+.video-per {
     height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.emoji-actions {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.like-icon,
+.comment-icon,
+.save-icon,
+.share-icon {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    font-size: 0px;
+    border-radius: 50%;
+    transition: all 200ms ease-in-out 0s;
+    background-color: rgba(22, 24, 35, 0.06);
+    margin-top: 8px;
+    margin-bottom: 6px;
+}
+
+.color-like-icon {
+    color: #20d5ec;
+}
+
+.action {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0px;
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: column;
 }

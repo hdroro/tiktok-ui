@@ -465,3 +465,214 @@ export const MusicIcon = ({ width = '1em', height = '1em', className }) => (
         <path d="M35 10.76a1 1 0 0 0-1.22-.98l-15.99 3.64a1 1 0 0 0-.78.97V38c.03 2.17-2.2 4.43-5.4 5.28-3.56.96-6.96-.2-7.6-2.57-.63-2.37 1.74-5.07 5.3-6.02a9.2 9.2 0 0 1 3.7-.25V14.39a5 5 0 0 1 3.9-4.87l15.98-3.64A5 5 0 0 1 39 10.76v22.36c.08 2.2-2.17 4.5-5.4 5.36-3.56.95-6.96-.2-7.6-2.57-.63-2.38 1.74-5.08 5.3-6.03a9.2 9.2 0 0 1 3.7-.25V10.76Z"></path>
     </svg>
 );
+
+export const LikeIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
+    <svg
+        className={className}
+        width={width}
+        height={height}
+        viewBox="0 0 24 24"
+        fill="black"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path d="M7.5 2.25c3 0 4.5 2 4.5 2s1.5-2 4.5-2c3.5 0 6 2.75 6 6.25 0 4-3.269 7.566-6.25 10.25C14.41 20.407 13 21.5 12 21.5s-2.45-1.101-4.25-2.75C4.82 16.066 1.5 12.5 1.5 8.5c0-3.5 2.5-6.25 6-6.25Z"></path>
+        <path
+            fill="black"
+            fillOpacity=".03"
+            d="M2.402 12.2c1.187 2.497 3.357 4.727 5.348 6.55C9.55 20.399 11 21.5 12 21.5s2.41-1.093 4.25-2.75c2.98-2.684 6.25-6.25 6.25-10.25 0-.087-.002-.174-.005-.26C20.567 13.661 13.68 18.5 11.75 18.5c-1.437 0-6.14-2.687-9.348-6.3Z"
+        ></path>
+    </svg>
+);
+
+export const LikedIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
+    <svg
+        className={className}
+        width={width}
+        height={height}
+        viewBox="0 0 48 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <g filter="url(#LikeRedShadowColor_filter0_d)">
+            <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M15 4.5C21 4.5 24 8.5 24 8.5C24 8.5 27 4.5 33 4.5C40 4.5 45 9.99998 45 17C45 25 38.4622 32.1314 32.5 37.5C28.8191 40.8144 26 43 24 43C22 43 19.101 40.7978 15.5 37.5C9.63898 32.1325 3 25 3 17C3 9.99998 8 4.5 15 4.5Z"
+                fill="#FE2C55"
+            ></path>
+        </g>
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M4.80371 24.3995C7.17815 29.3932 11.5185 33.8538 15.4999 37.4999C19.1009 40.7978 21.9999 42.9999 23.9999 42.9999C25.9999 42.9999 28.819 40.8144 32.4999 37.4999C38.4621 32.1314 44.9999 24.9999 44.9999 16.9999C44.9999 16.8252 44.9968 16.6513 44.9906 16.4785C41.1344 27.3238 27.3575 37 23.5001 37C20.6255 37 11.2219 31.6262 4.80371 24.3995Z"
+            fill="black"
+            fillOpacity="0.03"
+        ></path>
+        <defs>
+            <filter
+                id="LikeRedShadowColor_filter0_d"
+                x="0.6"
+                y="3.3"
+                width="46.8"
+                height="43.3"
+                filterUnits="userSpaceOnUse"
+                colorInterpolationFilters="sRGB"
+            >
+                <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+                <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                ></feColorMatrix>
+                <feOffset dy="1.2"></feOffset>
+                <feGaussianBlur stdDeviation="1.2"></feGaussianBlur>
+                <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"
+                ></feColorMatrix>
+                <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow"
+                ></feBlend>
+                <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect1_dropShadow"
+                    result="shape"
+                ></feBlend>
+            </filter>
+        </defs>
+    </svg>
+);
+
+export const CommentIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
+    <svg
+        className={className}
+        width={width}
+        height={height}
+        viewBox="0 0 48 48"
+        fill="black"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path d="M3.5 21.44C3.5 11.47 13.04 4 24 4s20.5 7.47 20.5 17.44c0 5.85-2.93 10.69-6.47 14.37a41.67 41.67 0 0 1-11.06 7.97A2.05 2.05 0 0 1 24 41.95v-3.08c-10.96 0-20.5-7.47-20.5-17.43Zm11.79 3.07a2.56 2.56 0 1 0 0-5.12 2.56 2.56 0 0 0 0 5.12Zm8.71 0a2.56 2.56 0 1 0 0-5.12 2.56 2.56 0 0 0 0 5.12Zm11.27-2.56a2.56 2.56 0 1 0-5.12 0 2.56 2.56 0 0 0 5.12 0Z"></path>
+    </svg>
+);
+
+export const SaveIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
+    <svg
+        className={className}
+        width={width}
+        height={height}
+        viewBox="0 0 24 24"
+        fill="black"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            fill="currentColor"
+            d="M4 4.5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v15.13a1 1 0 0 1-1.555.831l-6.167-4.12a.5.5 0 0 0-.556 0l-6.167 4.12A1 1 0 0 1 4 19.63V4.5Z"
+        ></path>
+        <path
+            fill="currentColor"
+            fillOpacity=".03"
+            d="M4.032 4.144A1.894 1.894 0 0 0 4 4.5v15.13a1 1 0 0 0 1.555.831l6.167-4.12a.5.5 0 0 1 .41-.066l-.427-.198a1.489 1.489 0 0 0-1.377.063c-.581.339-1.45.85-2.25 1.339-.59.359-1.427.695-2.187.962-.929.325-1.86-.387-1.86-1.37V4.143Zm8.251 12.202 6.162 4.115A1 1 0 0 0 20 19.63V4.5a2 2 0 0 0-1.123-1.798c.21.254.334.58.33.936a117.008 117.008 0 0 1-.896 13.408c-.124.99-1.17 1.553-2.076 1.133l-3.952-1.833Z"
+        ></path>
+    </svg>
+);
+
+export const SavedIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
+    <svg
+        className={className}
+        width={width}
+        height={height}
+        viewBox="0 0 24 24"
+        fill="black"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            fill="#FACE15"
+            d="M4 4.5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v15.13a1 1 0 0 1-1.555.831l-6.167-4.12a.5.5 0 0 0-.556 0l-6.167 4.12A1 1 0 0 1 4 19.63V4.5Z"
+        ></path>
+        <path
+            fill="black"
+            fillOpacity=".03"
+            d="M4.032 4.144A1.894 1.894 0 0 0 4 4.5v15.13a1 1 0 0 0 1.555.831l6.167-4.12a.5.5 0 0 1 .41-.066l-.427-.198a1.489 1.489 0 0 0-1.377.063c-.581.339-1.45.85-2.25 1.339-.59.359-1.427.695-2.187.962-.929.325-1.86-.387-1.86-1.37V4.143Zm8.251 12.202 6.162 4.115A1 1 0 0 0 20 19.63V4.5a2 2 0 0 0-1.123-1.798c.21.254.334.58.33.936a117.008 117.008 0 0 1-.896 13.408c-.124.99-1.17 1.553-2.076 1.133l-3.952-1.833Z"
+        ></path>
+    </svg>
+);
+
+export const ShareIconHome = ({ width = '2.4rem', height = '2.4rem', className }) => (
+    <svg
+        className={className}
+        width={width}
+        height={height}
+        viewBox="0 0 20 20"
+        fill="black"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            fill="currentColor"
+            fillRule="evenodd"
+            d="M10.938 3.175a.674.674 0 0 1 1.138-.488l6.526 6.215c.574.547.554 1.47-.043 1.991l-6.505 5.676a.674.674 0 0 1-1.116-.508V13.49s-6.985-1.258-9.225 2.854c-.209.384-1.023.518-.857-1.395.692-3.52 2.106-9.017 10.082-9.017V3.175Z"
+            clipRule="evenodd"
+        ></path>
+        <path
+            fill="#161823"
+            fillRule="evenodd"
+            d="m15.754 6.212 1.295 2.59a1.122 1.122 0 0 1-.268 1.349l-5.799 5.042s-.28 1.403.562 1.403c.842 0 7.578-6.174 7.578-6.174s.28-.842-.561-1.684c-.843-.842-2.807-2.526-2.807-2.526Z"
+            clipRule="evenodd"
+            opacity=".03"
+        ></path>
+        <path
+            fillRule="evenodd"
+            d="M10.937 6.23v7.297s-6.683-.942-8.777 2.246C.146 18.839.331 12.309 3.363 9.057c3.033-3.252 7.574-2.827 7.574-2.827Z"
+            clipRule="evenodd"
+            opacity=".09"
+        ></path>
+    </svg>
+);
+
+export const MoreIconMessage = ({ width = '1em', height = '1em', className }) => (
+    <svg
+        className={className}
+        width={width}
+        height={height}
+        viewBox="0 0 48 48"
+        fill="black"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path d="M5 24a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm15 0a4 4 0 1 1 8 0 4 4 0 0 1-8 0Zm15 0a4 4 0 1 1 8 0 4 4 0 0 1-8 0Z"></path>
+    </svg>
+);
+
+export const EmojiIcon = ({ width = '1em', height = '1em', className }) => (
+    <svg
+        className={className}
+        width={width}
+        height={height}
+        viewBox="0 0 48 48"
+        fill="black"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42C33.9411 42 42 33.9411 42 24C42 14.0589 33.9411 6 24 6ZM2 24C2 11.8497 11.8497 2 24 2C36.1503 2 46 11.8497 46 24C46 36.1503 36.1503 46 24 46C11.8497 46 2 36.1503 2 24Z"
+        ></path>
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M17 23C18.6569 23 20 21.2091 20 19C20 16.7909 18.6569 15 17 15C15.3431 15 14 16.7909 14 19C14 21.2091 15.3431 23 17 23Z"
+        ></path>
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M31 23C32.6569 23 34 21.2091 34 19C34 16.7909 32.6569 15 31 15C29.3431 15 28 16.7909 28 19C28 21.2091 29.3431 23 31 23Z"
+        ></path>
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M16 28.3431C16 31.4673 19.5817 36 24 36C28.4183 36 32 31.4673 32 28.3431C32 25.219 16 25.219 16 28.3431Z"
+        ></path>
+    </svg>
+);
