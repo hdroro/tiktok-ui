@@ -3,10 +3,13 @@ import styles from './Message.module.scss';
 import { BackIcon, EmojiIcon, MessengerSettingIcon, MoreIconMessage } from '~/components/Icons';
 import { Link } from 'react-router-dom';
 import Tippy from '@tippyjs/react';
+import { useModal } from '~/hooks';
+import Modal from '~/components/Modal/Modal';
 
 const cx = classNames.bind(styles);
 
 function Message() {
+    const { isShowing, toggle } = useModal();
     return (
         <div className={cx('wrapper')}>
             <Link to={'/'} className={cx('back-icon')}>
@@ -15,9 +18,10 @@ function Message() {
             <div className={cx('messenger-user')}>
                 <div className={cx('messenges')}>
                     <h1 className={cx('messenges-title')}>Messages</h1>
-                    <div className={cx('messenges-setting')}>
+                    <div className={cx('messenges-setting')} onClick={toggle}>
                         <MessengerSettingIcon />
                     </div>
+                    <Modal isShowing={isShowing} hide={toggle} />
                 </div>
                 {/* <div className={cx('users')}>No message</div> */}
 
@@ -67,9 +71,9 @@ function Message() {
                 <div className={cx('chat-main')}></div>
                 <div className={cx('chat-send-bottom')}>
                     <div className={cx('message-input-area')}>
-                        <input className={cx('input-message')} placeholder="Send messages" />
-                        <Tippy content="Add emoji" placement="top">
-                            <div>
+                        <input className={cx('input-message')} placeholder="Send a message...." />
+                        <Tippy content="Click to add emojis" placement="top">
+                            <div className={cx('emoji-item')}>
                                 <EmojiIcon className={cx('emoji-icon')} />
                             </div>
                         </Tippy>
