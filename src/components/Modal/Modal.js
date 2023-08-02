@@ -6,8 +6,8 @@ import Button from '../Button/Button';
 
 const cx = classNames.bind(styles);
 
-const Modal = ({ isShowing, hide }) =>
-    isShowing
+function Modal({ isShowing, hide }) {
+    return isShowing
         ? ReactDOM.createPortal(
               <React.Fragment>
                   <div
@@ -43,7 +43,11 @@ const Modal = ({ isShowing, hide }) =>
                                   <div className={cx('group-btn-radio')}>
                                       <div className={cx('friends-option')}>
                                           <label className={cx('label-container')}>
-                                              <input type="radio" className={cx('input-radio')} />
+                                              <input
+                                                  type="radio"
+                                                  className={cx('input-radio-friends')}
+                                                  name="radio-group"
+                                              />
                                               <div className={cx('radio_friends-option')}></div>
                                               <span className={cx('radio-options')}>Friends</span>
                                           </label>
@@ -51,9 +55,13 @@ const Modal = ({ isShowing, hide }) =>
 
                                       <div className={cx('no-one-option')}>
                                           <label className={cx('label-container')}>
-                                              <input type="radio" className={cx('input-radio')} />
+                                              <input
+                                                  type="radio"
+                                                  className={cx('input-radio-no-one')}
+                                                  name="radio-group"
+                                              />
                                               <div className={cx('radio_no-one-option')}></div>
-                                              <span className={cx('radio-options')}>Friends</span>
+                                              <span className={cx('radio-options')}>No one</span>
                                           </label>
                                       </div>
                                   </div>
@@ -61,10 +69,10 @@ const Modal = ({ isShowing, hide }) =>
                           </div>
                           <div className={cx('modal-footer')}>
                               <div className={cx('footer-container')}>
-                                  <Button primary className={cx('btn-save')}>
+                                  <Button primary className={cx('btn-save')} onClick={hide}>
                                       Save
                                   </Button>
-                                  <Button normal className={cx('btn-cancel')}>
+                                  <Button normal className={cx('btn-cancel')} onClick={hide}>
                                       Cancel
                                   </Button>
                               </div>
@@ -75,5 +83,6 @@ const Modal = ({ isShowing, hide }) =>
               document.body,
           )
         : null;
+}
 
 export default Modal;

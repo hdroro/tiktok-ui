@@ -5,10 +5,21 @@ import { Link } from 'react-router-dom';
 import Tippy from '@tippyjs/react';
 import { useModal } from '~/hooks';
 import Modal from '~/components/Modal/Modal';
+import { useState, useEffect } from 'react';
 
 const cx = classNames.bind(styles);
 
 function Message() {
+    const [currentTime, setCurrentTime] = useState(new Date());
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentTime(new Date());
+        }, 1000); // Cập nhật thời gian mỗi giây (1000ms)
+
+        // Clear interval khi component bị hủy để tránh memory leak
+        return () => clearInterval(interval);
+    });
     const { isShowing, toggle } = useModal();
     return (
         <div className={cx('wrapper')}>
@@ -34,7 +45,10 @@ function Message() {
                         />
                         <div className={cx('info-user')}>
                             <div className={cx('fullname')}>choose</div>
-                            <div className={cx('curTime')}>10:24 PM</div>
+                            <div className={cx('curTime')}>
+                                {currentTime.toLocaleTimeString().substring(0, 5)}{' '}
+                                {currentTime.toLocaleTimeString().substring(9, 11)}
+                            </div>
                         </div>
                         <MoreIconMessage className={cx('more-icon')} />
                     </div>
@@ -46,7 +60,10 @@ function Message() {
                         />
                         <div className={cx('info-user')}>
                             <div className={cx('fullname')}>choose</div>
-                            <div className={cx('curTime')}>10:24 PM</div>
+                            <div className={cx('curTime')}>
+                                {currentTime.toLocaleTimeString().substring(0, 5)}{' '}
+                                {currentTime.toLocaleTimeString().substring(9, 11)}
+                            </div>
                         </div>
 
                         <MoreIconMessage className={cx('more-icon')} />

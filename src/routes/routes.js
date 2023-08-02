@@ -10,6 +10,8 @@ import Upload from '~/pages/Upload';
 import Search from '~/pages/Search';
 import Live from '~/pages/Live';
 import Message from '~/pages/Message';
+import Setting from '~/pages/Setting/Setting';
+import Coin from '~/pages/Coin/Coin';
 
 //public routes
 const publicRoutes = [
@@ -20,6 +22,8 @@ const publicRoutes = [
     { path: config.routes.upload, component: Upload, layout: HeaderOnly },
     { path: config.routes.search, component: Search, layout: null },
     { path: config.routes.messages, component: Message, layout: HeaderOnly },
+    { path: config.routes.setting, component: Setting, layout: HeaderOnly },
+    { path: config.routes.coin, component: Coin, layout: HeaderOnly },
 ];
 
 //private routes
