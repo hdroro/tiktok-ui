@@ -10,16 +10,7 @@ import { useState, useEffect } from 'react';
 const cx = classNames.bind(styles);
 
 function Message() {
-    const [currentTime, setCurrentTime] = useState(new Date());
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentTime(new Date());
-        }, 1000); // Cập nhật thời gian mỗi giây (1000ms)
-
-        // Clear interval khi component bị hủy để tránh memory leak
-        return () => clearInterval(interval);
-    });
+    const currentTime = new Date();
     const { isShowing, toggle } = useModal();
 
     const options = {
