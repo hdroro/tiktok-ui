@@ -21,6 +21,13 @@ function Message() {
         return () => clearInterval(interval);
     });
     const { isShowing, toggle } = useModal();
+
+    const options = {
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: true, // Đặt thành 'false' nếu bạn muốn hiển thị theo 24-giờ
+    };
+
     return (
         <div className={cx('wrapper')}>
             <Link to={'/'} className={cx('back-icon')}>
@@ -46,8 +53,7 @@ function Message() {
                         <div className={cx('info-user')}>
                             <div className={cx('fullname')}>choose</div>
                             <div className={cx('curTime')}>
-                                {currentTime.toLocaleTimeString().substring(0, 5)}{' '}
-                                {currentTime.toLocaleTimeString().substring(9, 11)}
+                                {currentTime.toLocaleTimeString('en-US', options)}
                             </div>
                         </div>
                         <MoreIconMessage className={cx('more-icon')} />
@@ -61,8 +67,7 @@ function Message() {
                         <div className={cx('info-user')}>
                             <div className={cx('fullname')}>choose</div>
                             <div className={cx('curTime')}>
-                                {currentTime.toLocaleTimeString().substring(0, 5)}{' '}
-                                {currentTime.toLocaleTimeString().substring(9, 11)}
+                                {currentTime.toLocaleTimeString('en-US', options)}
                             </div>
                         </div>
 
