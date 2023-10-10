@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import Tippy from '@tippyjs/react';
 import { useModal } from '~/hooks';
 import Modal from '~/components/Modal/Modal';
-import { useState, useEffect } from 'react';
 
 const cx = classNames.bind(styles);
 

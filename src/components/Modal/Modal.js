@@ -20,15 +20,6 @@ function Modal({ isShowing, hide }) {
                       <div className={cx('modal')}>
                           <div className={cx('modal-header')}>
                               <h2 className={cx('header-title')}>Message settings</h2>
-                              <button
-                                  type="button"
-                                  className={cx('modal-close-button')}
-                                  data-dismiss="modal"
-                                  aria-label="Close"
-                                  onClick={hide}
-                              >
-                                  <span aria-hidden="true">×</span>
-                              </button>
                           </div>
                           <div className={cx('modal-content')}>
                               <div className={cx('wrapper')}>
